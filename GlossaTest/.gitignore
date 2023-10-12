@@ -1,0 +1,12 @@
+samples-private/
+samples/
+dist/binary/
+tests/www-datasets/
+dist/js/glossajs.min.js.LICENSE.txt
+
+cache/
+.vscode/
+debug.log
+npm-debug.log
+node_modules
+.npm
