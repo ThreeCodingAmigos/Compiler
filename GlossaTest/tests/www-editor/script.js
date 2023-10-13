@@ -636,18 +636,13 @@ $(document).ready(function () {
 
 // Xalia kwdikas! Fix opoios mporei!
 
-replaceIfFound(editor, 'programma', 'ΠΡΟΓΡΑΜΜΑ');
+replaceIfFound(editor, 'algorithmos', 'ΑΛΓΟΡΙΘΜΟΣ');
 
-replaceIfFound(editor, 'metablhtes', 'ΜΕΤΑΒΛΗΤΕΣ');
-replaceIfFound(editor, 'staueres', 'ΣΤΑΘΕΡΕΣ');
+replaceIfFound(editor, 'dedomena', 'ΔΕΔΟΜΕΝΑ');
 
-replaceIfFound(editor, 'akeraies', 'ΑΚΕΡΑΙΕΣ');
-replaceIfFound(editor, 'pragmatikes', 'ΠΡΑΓΜΑΤΙΚΕΣ');
-replaceIfFound(editor, 'xarakthres', 'ΧΑΡΑΚΤΗΡΕΣ');
-replaceIfFound(editor, 'logikes', 'ΛΟΓΙΚΕΣ');
 
-replaceIfFound(editor, 'arxh', 'ΑΡΧΗ');
-replaceIfFound(editor, 'telos_programmatos', 'ΤΕΛΟΣ_ΠΡΟΓΡΑΜΜΑΤΟΣ');
+
+replaceIfFound(editor, 'telos', 'ΤΕΛΟΣ');
 
 replaceIfFound(editor, 'an', 'ΑΝ');
 replaceIfFound(editor, 'tote', 'ΤΟΤΕ');

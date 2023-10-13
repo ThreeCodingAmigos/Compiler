@@ -24,16 +24,14 @@ define('ace/mode/glossa', function(require, exports, module) {
     var glossaHighlightRules = function() {
 
         var keywords = (
-            "|ΣΤΑΘΕΡΕΣ|ΜΕΤΑΒΛΗΤΕΣ" +
+            "ΔΕΔΟΜΕΝΑ" +
             "|ΑΝ|ΤΟΤΕ|ΑΛΛΙΩΣ|ΑΛΛΙΩΣ_ΑΝ|ΤΕΛΟΣ_ΑΝ"+
             "|ΕΠΙΛΕΞΕ|ΠΕΡΙΠΤΩΣΗ|ΠΕΡΙΠΤΩΣΗ ΑΛΛΙΩΣ|ΤΕΛΟΣ_ΕΠΙΛΟΓΩΝ"+
             "|ΟΣΟ|ΕΠΑΝΑΛΑΒΕ|ΤΕΛΟΣ_ΕΠΑΝΑΛΗΨΗΣ"+
             "|ΑΡΧΗ_ΕΠΑΝΑΛΗΨΗΣ|ΜΕΧΡΙΣ_ΟΤΟΥ"+
             "|ΓΙΑ|ΑΠΟ|ΜΕΧΡΙ|ΜΕ_ΒΗΜΑ|ΜΕ|ΒΗΜΑ" +
-            "|ΓΡΑΨΕ|ΔΙΑΒΑΣΕ"+
-            "|ΚΑΛΕΣΕ" +
-            "|ΑΚΕΡΑΙΕΣ|ΠΡΑΓΜΑΤΙΚΕΣ|ΛΟΓΙΚΕΣ|ΧΑΡΑΚΤΗΡΕΣ"+
-            "|ΑΚΕΡΑΙΑ|ΠΡΑΓΜΑΤΙΚΗ|ΧΑΡΑΚΤΗΡΑΣ|ΛΟΓΙΚΗ"
+            "|ΕΜΦΑΝΙΣΕ|ΔΙΑΒΑΣΕ|ΕΚΤΥΠΩΣΕ"+
+            "|ΚΑΛΕΣΕ"
     );
     
         var buildinConstants = (
@@ -47,7 +45,7 @@ define('ace/mode/glossa', function(require, exports, module) {
 
         var keywordMapper = this.createKeywordMapper({
             "keyword": keywords,
-            "storage.type": "ΠΡΟΓΡΑΜΜΑ|ΑΡΧΗ|ΤΕΛΟΣ_ΠΡΟΓΡΑΜΜΑΤΟΣ|ΣΥΝΑΡΤΗΣΗ|ΔΙΑΔΙΚΑΣΙΑ|ΤΕΛΟΣ_ΣΥΝΑΡΤΗΣΗΣ|ΤΕΛΟΣ_ΔΙΑΔΙΚΑΣΙΑΣ",
+            "storage.type": "ΑΛΓΟΡΙΘΜΟΣ|ΤΕΛΟΣ",
             "constant.language": buildinConstants,
             "constant.language.boolean": "ΑΛΗΘΗΣ|ΨΕΥΔΗΣ",
             "support.function": builtinFunctions

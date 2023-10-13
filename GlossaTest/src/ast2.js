@@ -87,7 +87,7 @@ return "";
     });
 
     if (node instanceof OBJ.Stmt_Write) {
-            return "ΓΡΑΨΕ" +param
+            return "ΕΜΦΑΝΙΣΕ" +param              //SKOUR EDW
     } else if (node instanceof OBJ.Stmt_Read) {
       return "ΔΙΑΒΑΣΕ" +param
     } else if (node instanceof OBJ.Stmt_For) {
