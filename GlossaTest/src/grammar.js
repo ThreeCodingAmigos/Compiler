@@ -16,29 +16,29 @@ function getGrammar() {
         Block
         "Τέλος" id? nl
 
-      UserFunction  = 
-        "ΣΥΝΑΡΤΗΣΗ"  id "(" AtLeastOneParameters ")" ":" ("ΑΚΕΡΑΙΑ" | "ΠΡΑΓΜΑΤΙΚΗ" | "ΧΑΡΑΚΤΗΡΑΣ" | "ΛΟΓΙΚΗ") nl+
-        Declaration_Block
-        "ΑΡΧΗ" nl+
-        Block
-        "ΤΕΛΟΣ_ΣΥΝΑΡΤΗΣΗΣ" nl*
+      // UserFunction  = 
+      //   "ΣΥΝΑΡΤΗΣΗ"  id "(" AtLeastOneParameters ")" ":" ("ΑΚΕΡΑΙΑ" | "ΠΡΑΓΜΑΤΙΚΗ" | "ΧΑΡΑΚΤΗΡΑΣ" | "ΛΟΓΙΚΗ") nl+
+      //   Declaration_Block
+      //   "ΑΡΧΗ" nl+
+      //   Block
+      //   "ΤΕΛΟΣ_ΣΥΝΑΡΤΗΣΗΣ" nl*
         
-      UserProcedure = 
-        "ΔΙΑΔΙΚΑΣΙΑ" id ("(" Parameters ")")? nl+
-        Declaration_Block
-        "ΑΡΧΗ" nl+
-        Block
-        "ΤΕΛΟΣ_ΔΙΑΔΙΚΑΣΙΑΣ" nl*
+      // UserProcedure = 
+      //   "ΔΙΑΔΙΚΑΣΙΑ" id ("(" Parameters ")")? nl+
+      //   Declaration_Block
+      //   "ΑΡΧΗ" nl+
+      //   Block
+      //   "ΤΕΛΟΣ_ΔΙΑΔΙΚΑΣΙΑΣ" nl*
 
       Declaration_Block = 
-        ("Σταθερές" nl+ 
+        ("Δεδομένα" nl+ 
         DefConstant*)?
         ("Μεταβλητές" nl+ 
         DefVariables*)?
 
       DefConstant  = id "=" Expr nl+
 
-      DefVariables = ("Ακέραιες" | "Πραγματικές" | "Χαρακτήρες" | "Λογικές") ":" VarParameters nl+
+      DefVariables = ("Δεδομένα" | "Πραγματικές" | "Χαρακτήρες" | "Λογικές") ":" VarParameters nl+
       
       Block = (InnerCommand nl+)*
 
