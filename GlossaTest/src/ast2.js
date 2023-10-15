@@ -55,7 +55,7 @@ class ASTree {
     if (value === undefined || typeof value === "function") {
       return undefined;
     } else if (typeof value === "Stmt_Write") {
-      return "ΓΡΑΨΕ"
+      return "Εμφάνισε"
     }
 return "";
     
@@ -87,11 +87,11 @@ return "";
     });
 
     if (node instanceof OBJ.Stmt_Write) {
-            return "ΕΜΦΑΝΙΣΕ" +param              //SKOUR EDW
+            return "Εμφάνισε" +param              //SKOUR EDW
     } else if (node instanceof OBJ.Stmt_Read) {
-      return "ΔΙΑΒΑΣΕ" +param
+      return "Διάβασε" +param
     } else if (node instanceof OBJ.Stmt_For) {
-      return "ΓΙΑ" +param
+      return "Για" +param
     } 
 
     return line + param;
