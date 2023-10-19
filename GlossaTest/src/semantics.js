@@ -358,7 +358,6 @@ var operation = {
     name,
     _nl0,
     decl,
-    _ARXH,
     _nl1,
     mBlock,
     _TELOS_PROGRAMMATOS,
@@ -371,7 +370,6 @@ var operation = {
       mBlock.toAST(),
       nameend.toAST(),
       getLineNo(_PROGRAMMA),
-      getLineNo(_ARXH),
       getLineNo(_TELOS_PROGRAMMATOS)
     );
   },
@@ -386,7 +384,6 @@ var operation = {
     funType,
     _nl0,
     decl,
-    _Arxi,
     _nl1,
     mBlock,
     _TelosSynartisis,
@@ -399,7 +396,6 @@ var operation = {
       decl.toAST(),
       mBlock.toAST(),
       getLineNo(name),
-      getLineNo(_Arxi),
       getLineNo(_TelosSynartisis)
     );
   },
@@ -412,7 +408,6 @@ var operation = {
     _3,
     _nl0,
     decl,
-    _Arxi,
     _nl1,
     mBlock,
     _TelosDiadikasias,
@@ -426,7 +421,6 @@ var operation = {
       decl.toAST(),
       mBlock.toAST(),
       getLineNo(name),
-      getLineNo(_Arxi),
       getLineNo(_TelosDiadikasias)
     );
   },

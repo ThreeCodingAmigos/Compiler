@@ -841,7 +841,7 @@ class UserFunction {
     declarations,
     body,
     cmdLineNo,
-    cmdLineNoArxi,
+    
     cmdLineNoTelosSynartisis
   ) {
     this.name = name;
@@ -850,7 +850,7 @@ class UserFunction {
     this.declarations = declarations;
     this.body = body;
     this.cmdLineNo = cmdLineNo;
-    this.cmdLineNoArxi = cmdLineNoArxi;
+    
     this.cmdLineNoTelosSynartisis = cmdLineNoTelosSynartisis;
   }
 
@@ -1035,7 +1035,7 @@ class UserProcedure {
     declarations,
     body,
     cmdLineNo,
-    cmdLineNoArxi,
+    
     cmdLineNoTelosDiadikasias
   ) {
     this.name = name;
@@ -1043,7 +1043,7 @@ class UserProcedure {
     this.declarations = declarations;
     this.body = body;
     this.cmdLineNo = cmdLineNo;
-    this.cmdLineNoArxi = cmdLineNoArxi;
+    
     this.cmdLineNoTelosDiadikasias = cmdLineNoTelosDiadikasias;
   }
 
@@ -1164,7 +1164,7 @@ class UserProcedure {
             }
           });
 
-          await env.setActiveLine(this.cmdLineNoArxi);
+          
 
           await body.resolve(env);
 
@@ -1359,7 +1359,6 @@ class MainProgram {
     body,
     prognameend,
     cmdLineNoProgramma,
-    cmdLineNoArxh,
     cmdLineNoTelosProgrammatos
   ) {
     this.progname = progname;
@@ -1367,7 +1366,6 @@ class MainProgram {
     this.body = body;
     this.prognameend = prognameend;
     this.cmdLineNoProgramma = cmdLineNoProgramma;
-    this.cmdLineNoArxh = cmdLineNoArxh;
     this.cmdLineNoTelosProgrammatos = cmdLineNoTelosProgrammatos;
   }
 
@@ -1388,8 +1386,6 @@ class MainProgram {
     await env.setActiveLine(this.cmdLineNoProgramma);
 
     await this.declarations.resolve(env);
-
-    await env.setActiveLine(this.cmdLineNoArxh);
 
     await this.body.resolve(env);
 
