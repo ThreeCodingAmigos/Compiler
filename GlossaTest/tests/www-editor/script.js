@@ -636,30 +636,35 @@ $(document).ready(function () {
 
 // Xalia kwdikas! Fix opoios mporei!
 
-replaceIfFound(editor, 'algorithmos', 'ΑΛΓΟΡΙΘΜΟΣ');
+replaceIfFound(editor, 'programma', 'Αλγόριθμος');
 
-replaceIfFound(editor, 'dedomena', 'ΔΕΔΟΜΕΝΑ');
+replaceIfFound(editor, 'metablhtes', 'ΜΕΤΑΒΛΗΤΕΣ');
+replaceIfFound(editor, 'staueres', 'ΣΤΑΘΕΡΕΣ');
 
+replaceIfFound(editor, 'akeraies', 'ΑΚΕΡΑΙΕΣ');
+replaceIfFound(editor, 'pragmatikes', 'ΠΡΑΓΜΑΤΙΚΕΣ');
+replaceIfFound(editor, 'xarakthres', 'ΧΑΡΑΚΤΗΡΕΣ');
+replaceIfFound(editor, 'logikes', 'ΛΟΓΙΚΕΣ');
 
+replaceIfFound(editor, 'arxh', 'ΑΡΧΗ');
+replaceIfFound(editor, 'telos_programmatos', 'Τέλος');
 
-replaceIfFound(editor, 'telos', 'ΤΕΛΟΣ');
-
-replaceIfFound(editor, 'an', 'ΑΝ');
-replaceIfFound(editor, 'tote', 'ΤΟΤΕ');
-replaceIfFound(editor, 'allivs', 'ΑΛΛΙΩΣ');
-replaceIfFound(editor, 'allivs_an', 'ΑΛΛΙΩΣ_ΑΝ');
-replaceIfFound(editor, 'telos_an', 'ΤΕΛΟΣ_ΑΝ');
-replaceIfFound(editor, 'grace', 'ΓΡΑΨΕ');
-replaceIfFound(editor, 'diabase', 'ΔΙΑΒΑΣΕ');
-replaceIfFound(editor, 'oso', 'ΟΣΟ');
-replaceIfFound(editor, 'epanalabe', 'ΕΠΑΝΑΛΑΒΕ');
-replaceIfFound(editor, 'telos_epanalhchs', 'ΤΕΛΟΣ_ΕΠΑΝΑΛΗΨΗΣ');
-replaceIfFound(editor, 'arxh_epanalhchs', 'ΑΡΧΗ_ΕΠΑΝΑΛΗΨΗΣ');
-replaceIfFound(editor, 'mexris_otou', 'ΜΕΧΡΙΣ_ΟΤΟΥ');
-replaceIfFound(editor, 'gia', 'ΓΙΑ');
-replaceIfFound(editor, 'apo', 'ΑΠΟ');
-replaceIfFound(editor, 'mexri', 'ΜΕΧΡΙ');
-replaceIfFound(editor, 'me_bhma', 'ΜΕ_ΒΗΜΑ');
+replaceIfFound(editor, 'an', 'Αν');
+replaceIfFound(editor, 'tote', 'τότε');
+replaceIfFound(editor, 'allivs', 'αλλιώς');
+replaceIfFound(editor, 'allivs_an', 'αλλιώς_αν');
+replaceIfFound(editor, 'telos_an', 'Τέλος_αν');
+replaceIfFound(editor, 'grace', 'Εμφάνισε');
+replaceIfFound(editor, 'diabase', 'Διάβασε');
+replaceIfFound(editor, 'oso', 'Όσο');
+replaceIfFound(editor, 'epanalabe', 'επανάλαβε');
+replaceIfFound(editor, 'telos_epanalhchs', 'Τέλος_επανάληψης');
+replaceIfFound(editor, 'arxh_epanalhchs', 'Αρχή_επανάληψης');
+replaceIfFound(editor, 'mexris_otou', 'μέχρις_ότου');
+replaceIfFound(editor, 'gia', 'Για');
+replaceIfFound(editor, 'apo', 'από');
+replaceIfFound(editor, 'mexri', 'μέχρι');
+replaceIfFound(editor, 'me_bhma', 'με_βήμα');
 
 replaceIfFound(editor, 'διβ', 'DIV');
 replaceIfFound(editor, 'μοδ', 'MOD');

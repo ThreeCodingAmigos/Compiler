@@ -12,19 +12,33 @@ function getGrammar() {
       MainProgram      = 
         "Αλγόριθμος" id nl+
         Declaration_Block
-
+        "ΑΡΧΗ" nl+
         Block
-        "Τέλος" id? nl
+        "Τέλος" id? nl*
+
+      UserFunction  = 
+        "ΣΥΝΑΡΤΗΣΗ"  id "(" AtLeastOneParameters ")" ":" ("ΑΚΕΡΑΙΑ" | "ΠΡΑΓΜΑΤΙΚΗ" | "ΧΑΡΑΚΤΗΡΑΣ" | "ΛΟΓΙΚΗ") nl+
+        Declaration_Block
+        "ΑΡΧΗ" nl+
+        Block
+        "ΤΕΛΟΣ_ΣΥΝΑΡΤΗΣΗΣ" nl*
+        
+      UserProcedure = 
+        "ΔΙΑΔΙΚΑΣΙΑ" id ("(" Parameters ")")? nl+
+        Declaration_Block
+        "ΑΡΧΗ" nl+
+        Block
+        "ΤΕΛΟΣ_ΔΙΑΔΙΚΑΣΙΑΣ" nl*
 
       Declaration_Block = 
-        ("Δεδομένα" nl+ 
+        ("ΣΤΑΘΕΡΕΣ" nl+ 
         DefConstant*)?
-        ("Μεταβλητές" nl+ 
+        ("ΜΕΤΑΒΛΗΤΕΣ" nl+ 
         DefVariables*)?
 
       DefConstant  = id "=" Expr nl+
 
-      DefVariables = ("Δεδομένα" | "Πραγματικές" | "Χαρακτήρες" | "Λογικές") ":" VarParameters nl+
+      DefVariables = ("ΑΚΕΡΑΙΕΣ" | "ΠΡΑΓΜΑΤΙΚΕΣ" | "ΧΑΡΑΚΤΗΡΕΣ" | "ΛΟΓΙΚΕΣ") ":" VarParameters nl+
       
       Block = (InnerCommand nl+)*
 
@@ -35,16 +49,16 @@ function getGrammar() {
       Stmt_Write    = grapse Arguments 
       Stmt_Read     = diavase VarParameters
 
-      WhileExpr     = "Οσο" Expr "επανάλαβε" nl+ Block "Τέλος_επανάληψης"
+      WhileExpr     = "Όσο" Expr "επανάλαβε" nl+ Block "Τέλος_επανάληψης"
       DoWhileExpr   = "Αρχή_επανάληψης" nl+ Block "μέχρις_ότου" Expr
-      ForExpr       = "Για" (IdTbl | id) "από" Expr "μέχρι" Expr (("με_βήμα" | "με βήμα") Expr)? nl+ Block "Τέλος_επανάληψης"
+      ForExpr       = "Για" (IdTbl | id) "από" Expr "μέχρι" Expr (("με_βήμα" | "ΜΕ ΒΗΜΑ") Expr)? nl+ Block "Τέλος_επανάληψης"
       IfExpr        = "Αν" Expr "τότε" nl+ Block ("αλλιώς_αν" Expr "τότε" nl+ Block)* ("αλλιώς" nl+ Block)? "Τέλος_αν"
 
       Subrange      = Expr ".." Expr
       SelectExpr    = "<" Expr | "<=" Expr | ">" Expr | ">=" Expr | "=" Expr | "<>" Expr
       SelectCase    = Subrange | SelectExpr | Expr 
       AtLeastOneSelectCase = NonemptyListOf<SelectCase, ",">
-      Stmt_Case   = "Επίλεηε" Expr nl+ ("περίπτωση" ~"αλλιώς" AtLeastOneSelectCase nl+ Block)* ("περίπτωση" "αλλιώς" nl+ Block)? "Τέλος_επιλογών"
+      Stmt_Case   = "ΕΠΙΛΕΞΕ" Expr nl+ ("ΠΕΡΙΠΤΩΣΗ" ~"αλλιώς" AtLeastOneSelectCase nl+ Block)* ("ΠΕΡΙΠΤΩΣΗ" "αλλιώς" nl+ Block)? "ΤΕΛΟΣ_ΕΠΙΛΟΓΩΝ"
 
       FunctionCall          = id "(" Arguments ")"
       ProcedureCall         = "ΚΑΛΕΣΕ" id ("(" Arguments ")")? 
@@ -78,7 +92,7 @@ function getGrammar() {
       /*    function     = "ΣΥΝΑΡΤΗΣΗ" ~idchar
           if           = "Αν" ~idchar
           else         = "αλλιώς" ~idchar
-          while        = "Οσο" ~idchar
+          while        = "Όσο" ~idchar
       */
 
 

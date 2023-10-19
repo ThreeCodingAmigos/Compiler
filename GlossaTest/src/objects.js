@@ -512,7 +512,7 @@ class Stmt_For {
           );
         else
           throw new GE.GInternalError(
-            "Μη έγκυρη τιμή για το βήμα της εντολής ΓΙΑ.",
+            "Μη έγκυρη τιμή Για το βήμα της εντολής Για.",
             this.cmdLineNoGia
           );
       }
@@ -522,7 +522,7 @@ class Stmt_For {
 
     if (v_step == 0)
       throw new GE.GError(
-        "Το βήμα της εντολής ΓΙΑ δεν μπορεί να λάβει την τιμή μηδέν.",
+        "Το βήμα της εντολής Για δεν μπορεί να λάβει την τιμή μηδέν.",
         this.cmdLineNoGia
       );
 
@@ -540,7 +540,7 @@ class Stmt_For {
         );
       else
         throw new GE.GInternalError(
-          "Μη έγκυρη τιμή για την αρχική τιμή της εντολής ΓΙΑ.",
+          "Μη έγκυρη τιμή Για την αρχική τιμή της εντολής Για.",
           this.cmdLineNoGia
         );
     }
@@ -561,7 +561,7 @@ class Stmt_For {
         );
       else
         throw new GE.GInternalError(
-          "Μη έγκυρη τιμή για την τελική τιμή της εντολής ΓΙΑ.",
+          "Μη έγκυρη τιμή Για την τελική τιμή της εντολής Για.",
           this.cmdLineNoGia
         );
     }
