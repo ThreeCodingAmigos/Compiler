@@ -11,7 +11,7 @@ function getGrammar() {
     
       MainProgram      = 
         "Αλγόριθμος" id nl+
-        Declaration_Block 
+        Declaration_Block        
         Block
         "Τέλος" id? nl*
 
